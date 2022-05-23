@@ -1,0 +1,33 @@
+
+  <div>{{message}}</div>
+<form action="/signup" method="post">
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Имя</label>
+    <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Почта</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Пароль</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+  </div>
+    <select class="form-select my-2" name="groupname" aria-label="Default select example">
+        <option selected>Выбери группу</option>
+        <option value="Пчелы">Пчелы</option>
+        <option value="Бобры">Бобры</option>
+        <option value="Тигры">Тигры</option>
+     </select>
+    <select class="form-select my-2"  name="year" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+    </select>
+
+  <button type="submit" class="btn btn-primary my-2">Submit</button>
+</form>
+

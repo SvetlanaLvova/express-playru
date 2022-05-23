@@ -1,0 +1,44 @@
+<h1>{{message}}</h1>
+
+<form action="/track" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Название трека</label>
+    <input type="text" name ="tittle" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Краткое описание</label>
+    <input type="textarea" name ="description" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Обложка</label>
+    <input type="text" name ="img" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Добавить</button>
+</form>
+
+
+<center>
+  {{#each userTracks}}
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="{{this.img}}"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{this.tittle}}</h5>
+          <p class="card-text">{{this.description}}</p>
+          <p class="card-text"><small
+              class="text-muted"
+            ></small></p>
+            <a href="/track/detail/{{this.id}}" class="btn btn-primary">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</center>

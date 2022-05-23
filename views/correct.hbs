@@ -1,0 +1,19 @@
+<h1>{{message}}</h1>
+<center>
+<form data-trackid="{{trackId}}" method="put" id="editTrackForm">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Название чая</label>
+    <input type="text" name ="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Описание</label>
+    <input type="textarea" name ="description" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Обложка</label>
+    <input type="text" name ="img" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Редактировать</button>
+</form>
+</center>
+<script src="/js/edit.js" defer></script>

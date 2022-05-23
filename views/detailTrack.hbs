@@ -1,0 +1,23 @@
+<center>
+  <h1>{{message}}</h1>
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{currentTrack.img}}" class="img-fluid rounded-start" alt="" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{currentTrack.tittle}}</h5>
+          <p class="card-text">{{currentTrack.description}}</p>
+          <p class="card-text"><small
+              class="text-muted"
+            >{{currentTrack.updatedAt}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="/track/edit/{{currentTrack.id}}" class="btn btn-primary"> Изменить</a>
+  <button class="btn btn-danger" id="deleteTrack" data-track={{currentTrack.id}}> Удалить</button>
+</center>
+<script defer src="/js/client.js"></script>
+
