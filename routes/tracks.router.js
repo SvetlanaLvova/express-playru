@@ -17,8 +17,8 @@ router
     const {
       userId
     } = req.session //достаем текущего зареганого юзера из сессии
-    if (userId === undefined) return res.redirect('/') // ДОБАВЛЕНО В РЕЛИЗЕ 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    const userTracks = await Music.findAll({ //!!! Пишу чтобы в "Мой плейлист" была музыка только текущего юзера
+    if (userId === undefined) return res.redirect('/') 
+    const userTracks = await Music.findAll({ //Пишу чтобы в "Мой плейлист" была музыка только текущего юзера
       include: {
         model: User,
         where: {
