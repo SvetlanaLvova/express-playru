@@ -2,6 +2,7 @@
 <h2> Технический стек: </h2>
 
 **Server:** Node, Express
+
 **DB:** PostgreSQL
   
 <h2> О приложении: </h2>
